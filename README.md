@@ -30,14 +30,9 @@ Este é um projeto de Landing Page criado para promover o Ford Mustang Mach-E, u
 
 Estrutura de Diretórios
 
-ford-mustang-mach-e-landing-page/
-│
-├── index.html           # Página principal HTML
-├── style.css            # Estilos da página
-├── assets/              # Imagens e ícones
-│   ├── logo.png
-│   └── mack-e.png
-└── README.md            # Este arquivo
+# Ford-mustang-mach-e-landing-page
+![Screenshot_2](https://github.com/user-attachments/assets/108d3931-6c22-478d-93ac-3d45dc898082)
+
 
 Licença
 Este projeto está licenciado sob a MIT License - veja o arquivo LICENSE para mais detalhes.
