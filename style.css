@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+/* Importa a fonte "Ubuntu" do Google Fonts para ser usada em todo o site. */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+/* Define estilos globais: remove margens e espaçamentos padrão, ajusta o modelo de caixa para incluir bordas no tamanho total e aplica a fonte Ubuntu. */
+
+:root {
+    --black: #2F2F2F;
+    --red: #F83038;
+    --white: #FFF;
+}
+/* Declara variáveis CSS reutilizáveis para cores, que podem ser usadas em todo o código. */
+
+.main {
+    position: relative;
+    min-height: 100vh;
+    background: linear-gradient(#1C1C1C, #323232);
+    padding: 30px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+/* Define o estilo da seção principal:
+   - Ocupa a altura mínima de toda a janela.
+   - Aplica um gradiente de fundo.
+   - Adiciona espaçamento interno.
+   - Centraliza o conteúdo horizontal e verticalmente em uma coluna. */
+
+.main::before {
+    content: 'PuroSangue';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16vw;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.05);
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+}
+/* Adiciona o texto decorativo "PuroSangue" como um elemento pseudo (`::before`):
+   - Posiciona no centro da tela.
+   - Aplica um tamanho proporcional à largura da tela.
+   - Usa baixa opacidade e sombra para criar um efeito de marca d'água. */
+
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* Define o estilo do cabeçalho:
+   - Fixa o cabeçalho no topo ao rolar a página.
+   - Aplica espaçamento interno e alinha os itens horizontalmente. */
+
+.logo {
+    max-width: 80px;
+}
+/* Define o tamanho máximo da logo. */
+
+.navigation {
+    display: flex;
+}
+/* Define um contêiner flexível para a navegação, alinhando os itens em linha. */
+
+.navigation li {
+    list-style: none;
+}
+/* Remove o estilo de lista (como marcadores) dos itens de navegação. */
+
+.navigation li a {
+    position: relative;
+    color: var(--white);
+    margin-left: 40px;
+    text-decoration: none;
+    transition: color 0.25s ease-in-out;
+}
+/* Estiliza os links da navegação:
+   - Remove sublinhado.
+   - Aplica espaçamento entre os links.
+   - Adiciona uma transição suave para alterações de cor. */
+
+.navigation li a:hover {
+    color: var(--red);
+}
+/* Altera a cor do link ao passar o mouse. */
+
+.content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
+    z-index: 1;
+}
+/* Estiliza o contêiner do conteúdo principal:
+   - Centraliza o texto em uma coluna.
+   - Garante que fique acima de outros elementos com z-index. */
+
+.content h2 {
+    font-size: 5em;
+    font-weight: 300;
+    color: var(--white);
+    text-align: center;
+}
+/* Define o estilo do título principal:
+   - Tamanho grande com cor branca e alinhado ao centro. */
+
+.content h2 span {
+    font-weight: 700;
+}
+/* Aumenta o peso da fonte para o texto dentro da tag `<span>`. */
+
+.btn {
+    display: inline-block;
+    background-color: var(--red);
+    color: var(--white);
+    text-decoration: none;
+    padding: 16px 36px;
+    margin-top: 20px;
+    border-radius: 50px;
+    font-size: 1.25em;
+    transition: letter-spacing 0.25s ease-in-out;
+}
+/* Estiliza um botão:
+   - Usa cor vermelha de fundo, texto branco e cantos arredondados.
+   - Adiciona espaçamento interno e uma transição suave para espaçamento entre letras. */
+
+.btn:hover {
+    letter-spacing: 1px;
+}
+/* Aumenta o espaçamento entre letras ao passar o mouse. */
+
+.mach {
+    max-width: 80%;
+}
+/* Define o tamanho máximo da imagem do carro. */
+
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* Estiliza o rodapé:
+   - Posiciona no final do conteúdo.
+   - Alinha os itens horizontalmente. */
+
+.sci {
+    display: flex;
+}
+/* Define um contêiner flexível para os ícones sociais. */
+
+.sci li {
+    list-style: none;
+}
+/* Remove marcadores dos itens de lista. */
+
+.sci li a {
+    color: var(--white);
+    font-size: 2em;
+    margin-right: 20px;
+    transition: color 0.25s ease-in-out;
+}
+/* Estiliza os links de redes sociais:
+   - Aplica tamanho grande e espaçamento entre os ícones.
+   - Adiciona uma transição para mudanças de cor. */
+
+.sci li a:hover {
+    color: var(--red);
+}
+/* Altera a cor do ícone ao passar o mouse. */
+
+.dots {
+    display: flex;
+}
+/* Define um contêiner flexível para os pontos de navegação (slider). */
+
+.dots .dot {
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background 0.25s ease-in-out;
+}
+/* Estiliza os pontos do slider:
+   - Círculos pequenos com uma leve transparência e animação para mudanças de cor. */
+
+.dots .dot.active {
+    background: var(--white);
+}
+/* Altera a cor do ponto ativo para branco. */
+
+.slider .slides {
+    position: absolute;
+    top: 60%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 100px;
+    transition: opacity 0.25s ease-in-out, top 0.25s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+}
+/* Estiliza os slides do carrossel:
+   - Posiciona os slides sobre o conteúdo.
+   - Adiciona animações suaves para opacidade e posição.
+   - Torna slides invisíveis inicialmente com `opacity: 0` e desabilita a interação. */
+
+.slider .slides.active {
+    opacity: 1;
+    top: 50%;
+}
+/* Torna os slides ativos visíveis e ajusta sua posição. */
+
+.slider .slides h2 {
+    color: var(--white);
+    font-size: 3em;
+}
+/* Define o estilo do texto dentro dos slides. */
+
+.slider .slides h2:last-child {
+    text-align: end;
+}
+/* Alinha o último elemento do texto nos slides à direita. */
+
+.slider .slides h2 span {
+    color: var(--red);
+    font-size: 0.5em;
+    font-weight: 400;
+    font-style: italic;
+}
+/* Estiliza o texto destacado nos slides:
+   - Usa cor vermelha, tamanho menor e estilo itálico. */
+
+/* Media Queries para Responsividade */
+
+@media (max-width: 1024px) {
+    .main {
+        padding: 30px 50px;
+    }
+    /* Ajusta o espaçamento para telas menores como tablets. */
+
+    .logo {
+        max-width: 60px;
+    }
+    /* Reduz o tamanho da logo. */
+
+    .navigation {
+        margin-top

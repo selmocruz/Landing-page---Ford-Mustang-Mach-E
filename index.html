@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt">
+<!-- Declaração do tipo de documento como HTML5. A linguagem é definida como português. -->
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres como UTF-8 para suporte a caracteres especiais. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configura a viewport para garantir responsividade em dispositivos móveis. -->
+
+    <title>Mach-E</title>
+    <!-- Define o título da página exibido na aba do navegador. -->
+
+    <link rel="stylesheet" href="style.css">
+    <!-- Vincula o arquivo CSS externo para estilizar a página. -->
+</head>
+
+<body>
+    <section class="main">
+        <!-- Seção principal da página que contém todo o conteúdo. -->
+
+        <header>
+            <!-- Cabeçalho da página com logo e navegação. -->
+            <a href="#">
+                <img src="./Assets/logo.png" class="logo" alt="logo">
+            </a>
+            <!-- Link para a página inicial com o logotipo da marca. -->
+
+            <nav>
+                <!-- Usando a tag <nav> para envolver os links de navegação -->
+                <ul class="navigation">
+                    <!-- Lista de navegação com links para diferentes seções. -->
+                    <li><a href="#">Exterior</a></li>
+                    <li><a href="#">Interior</a></li>
+                    <li><a href="#">Carregamento</a></li>
+                    <li><a href="#">Tecnologia</a></li>
+                    <li><a href="#">Modelos</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="content">
+            <!-- Div que contém o conteúdo principal como título, botão e imagem. -->
+
+            <h2>Ford Mustang<span> Mach-E</span></h2>
+            <!-- Título com o nome do carro. A tag <span> destaca "Mach-E". -->
+
+            <a href="#" class="btn">O puro sangue 100% Elétrico</a>
+            <!-- Botão com slogan do carro, atualmente sem funcionalidade (href="#"). -->
+
+            <img src="./Assets/mack-e.png" alt="Mustang Mach-E" class="mach">
+            <!-- Imagem do carro com uma classe para estilização. -->
+        </div>
+
+        <div class="slider">
+            <!-- Slider/carrossel que exibe informações adicionais do carro. -->
+
+            <div class="slides active">
+                <!-- Slide ativo que exibe velocidade máxima e potência máxima. -->
+                <h2>
+                    <span>Velocidade Máx.</span>
+                    <br>
+                    180km/h
+                </h2>
+                <h2>
+                    <span>Potência máxima</span>
+                    <br>
+                    329 CV
+                </h2>
+            </div>
+
+            <div class="slides">
+                <!-- Segundo slide com aceleração e autonomia máxima. -->
+                <h2>
+                    <span>0-100 km/h</span>
+                    <br>
+                    3.5s
+                </h2>
+                <h2>
+                    <span>Automonia Máxima</span>
+                    <br>
+                    600km
+                </h2>
+            </div>
+
+            <div class="slides">
+                <!-- Terceiro slide com informações de carregamento e bateria. -->
+                <h2>
+                    <span>Carregamento 10-80%</span>
+                    <br>
+                    32.3min
+                </h2>
+                <h2>
+                    <span>Capacidade bateria</span>
+                    <br>
+                    72.6kwh
+                </h2>
+            </div>
+        </div>
+
+        <footer>
+            <!-- Rodapé da página com ícones sociais e controle do slider. -->
+
+            <ul class="sci">
+                <!-- Lista de ícones sociais -->
+                <li>
+                    <a href="#">
+                        <ion-icon name="logo-facebook"></ion-icon>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <ion-icon name="logo-youtube"></ion-icon>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="dots">
+                <!-- Pontos para controle do slider/carrossel -->
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </footer>
+
+    </section>
+
+    <!-- Importa o Ionicons, uma biblioteca de ícones. -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        const slides = document.querySelectorAll(".slides");
+        const dots = document.querySelectorAll(".dot");
+
+        function setActive(i) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[i].classList.add('active');
+
+            dots.forEach(dot => dot.classList.remove('active'));
+            dots[i].classList.add('active');
+        }
+
+        for (let j = 0; j < dots.length; j++) {
+            dots[j].addEventListener('click', () => {
+                setActive(j);
+            });
+        }
+    </script>
+</body>
+
+</html>
