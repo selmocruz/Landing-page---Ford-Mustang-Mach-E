@@ -1,5 +1,8 @@
 Ford Mustang Mach-E - Landing Page
 
+![Screenshot_1](https://github.com/user-attachments/assets/f6a24bd1-931a-4fa9-a4f0-641bf5c735a0)
+
+
 Este é um projeto de Landing Page criado para promover o Ford Mustang Mach-E, um carro 100% elétrico. A página inclui seções interativas que mostram as especificações do carro, como velocidade máxima, potência, autonomia, e muito mais.
 
  Funcionalidades
